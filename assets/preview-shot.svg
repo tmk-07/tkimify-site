@@ -1,0 +1,25 @@
+<svg width="720" height="405" viewBox="0 0 720 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="96" y1="88" x2="628" y2="318" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1769ff"/>
+      <stop offset="0.52" stop-color="#9d3cff"/>
+      <stop offset="1" stop-color="#18cbb7"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(602 78) rotate(142) scale(364)">
+      <stop stop-color="#18cbb7" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#18cbb7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="405" rx="26" fill="#fbfcff"/>
+  <rect width="720" height="405" rx="26" fill="url(#r)"/>
+  <g opacity="0.5" stroke="#dbe2ef" stroke-width="1">
+    <path d="M60 68h600M60 150h600M60 232h600M60 314h600"/>
+    <path d="M120 42v318M240 42v318M360 42v318M480 42v318M600 42v318"/>
+  </g>
+  <g stroke="url(#g)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M360 62v278 M202 340h316 M236 340c0-68 56-124 124-124s124 56 124 124 M306 340v-62h108v62" />
+  </g>
+  <circle cx="612" cy="88" r="28" fill="url(#g)" opacity="0.22"/>
+  <text x="58" y="329" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#202333">Shot Tracker</text>
+  <text x="60" y="358" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#70788c">shot zones</text>
+</svg>

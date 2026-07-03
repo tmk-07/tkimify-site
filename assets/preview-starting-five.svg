@@ -1,0 +1,29 @@
+<svg width="720" height="405" viewBox="0 0 720 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="116" y1="98" x2="602" y2="304" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1769ff" stop-opacity="0.78"/>
+      <stop offset="0.52" stop-color="#9d3cff" stop-opacity="0.68"/>
+      <stop offset="1" stop-color="#18cbb7" stop-opacity="0.72"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(560 76) rotate(142) scale(340)">
+      <stop stop-color="#18cbb7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#18cbb7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="405" rx="24" fill="#0b0f17"/>
+  <rect width="720" height="405" rx="24" fill="url(#r)"/>
+  <g opacity="0.22" stroke="#ffffff" stroke-width="1">
+    <path d="M60 70h600M60 151h600M60 232h600M60 313h600"/>
+    <path d="M120 44v318M240 44v318M360 44v318M480 44v318M600 44v318"/>
+  </g>
+  <g stroke="url(#g)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="120" y="87" width="92" height="72" rx="18" />
+    <rect x="244" y="87" width="92" height="72" rx="18" />
+    <rect x="368" y="87" width="92" height="72" rx="18" />
+    <rect x="178" y="203" width="92" height="72" rx="18" />
+    <rect x="302" y="203" width="92" height="72" rx="18" />
+  </g>
+  <circle cx="612" cy="88" r="27" fill="url(#g)" opacity="0.15"/>
+  <text x="58" y="329" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#eef3ff">Starting Five</text>
+  <text x="60" y="358" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#8d98ad">auction game</text>
+</svg>
