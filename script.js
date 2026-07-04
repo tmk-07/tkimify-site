@@ -20,6 +20,15 @@ const projects = [
     isLive: true,
   },
 
+  {
+    name: "Project Two",
+    description: "A placeholder project card for the next tkimify site",
+    url: "#",
+    preview: "assets/preview-nba.svg",
+    logo: "",
+    isLive: false,
+  },
+
   // Example for later:
   // {
   //   name: "New Project",
