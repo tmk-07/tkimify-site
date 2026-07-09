@@ -1,52 +1,75 @@
 /*
-  Add/edit project cards here.
+  Edit cards here.
 
-  Fields:
-  - name: project title shown on the card
-  - description: short one-line description
-  - url: live project link
-  - preview: preview image path inside /assets
-  - logo: optional small icon beside the project name
-  - isLive: true/false status pill
+  Section fields:
+  - id: page anchor, like #apps
+  - title: section heading
+  - items: cards inside that section
+
+  Card fields:
+  - name
+  - description
+  - url
+  - preview
+  - logo
+  - isLive
 */
 
-const projects = [
+const sections = [
   {
-    name: "Starting Five",
-    description: "Draft the best team in an auction-style basketball draft",
-    url: "https://startingfive.tkimify.com",
-    preview: "assets/preview-starting-five-live.png",
-    logo: "assets/starting-five-logo.png",
-    isLive: true,
+    id: "apps",
+    title: "apps",
+    items: [
+      {
+        name: "Starting Five",
+        description: "Draft the best team in an auction-style basketball draft",
+        url: "https://startingfive.tkimify.com",
+        preview: "assets/preview-starting-five-live.png",
+        logo: "assets/starting-five-logo.png",
+        isLive: true,
+      },
+      {
+        name: "Sample App",
+        description: "Placeholder for the next interactive app",
+        url: "#",
+        preview: "assets/preview-nba.svg",
+        logo: "",
+        isLive: false,
+      },
+    ],
   },
-
   {
-    name: "Project Two",
-    description: "A placeholder project card for the next tkimify site",
-    url: "#",
-    preview: "assets/preview-nba.svg",
-    logo: "",
-    isLive: false,
+    id: "tools",
+    title: "tools",
+    items: [
+      {
+        name: "Basketball Shot Tracker",
+        description: "Quick way to keep track of your makes and misses in a shooting session",
+        url: "#",
+        preview: "assets/preview-shot-tracker.png",
+        logo: "assets/shot-tracker-logo.png",
+        isLive: false,
+      },
+      {
+        name: "Sample Tool Two",
+        description: "Placeholder for another useful tkimify tool",
+        url: "#",
+        preview: "assets/preview-nfl.svg",
+        logo: "",
+        isLive: false,
+      },
+    ],
   },
-
-  // Example for later:
-  // {
-  //   name: "New Project",
-  //   description: "Short description goes here",
-  //   url: "https://newproject.tkimify.com",
-  //   preview: "assets/preview-new-project.png",
-  //   logo: "assets/new-project-logo.png",
-  //   isLive: false,
-  // },
 ];
 
-const projectGrid = document.querySelector("#projects");
+const sectionsRoot = document.querySelector("#project-sections");
 
 function createProjectCard(project) {
-  const card = document.createElement(project.url ? "a" : "article");
+  const isLinked = project.url && project.url !== "#";
+  const card = document.createElement(isLinked ? "a" : "article");
   card.className = "project-card";
 
-  if (project.url) {
+  if (isLinked) {
     card.href = project.url;
     card.target = "_blank";
     card.rel = "noreferrer";
@@ -77,7 +100,29 @@ function createProjectCard(project) {
   return card;
 }
 
-projectGrid.innerHTML = "";
-projects.forEach((project) => {
-  projectGrid.appendChild(createProjectCard(project));
+function createSection(section) {
+  const sectionEl = document.createElement("section");
+  sectionEl.className = "project-section";
+  sectionEl.id = section.id;
+  sectionEl.setAttribute("aria-labelledby", `${section.id}-heading`);
+
+  sectionEl.innerHTML = `
+    <div class="section-heading">
+      <h1 id="${section.id}-heading">${section.title}</h1>
+    </div>
+    <div class="project-grid"></div>
+  `;
+
+  const grid = sectionEl.querySelector(".project-grid");
+
+  section.items.forEach((project) => {
+    grid.appendChild(createProjectCard(project));
+  });
+
+  return sectionEl;
+}
+
+sectionsRoot.innerHTML = "";
+sections.forEach((section) => {
+  sectionsRoot.appendChild(createSection(section));
 });
