@@ -6,7 +6,7 @@
   <title>tkimify</title>
   <meta name="description" content="A compact project directory linking to tkimify project subdomains." />
   <meta name="theme-color" content="#080a0f" />
-  <meta property="og:title" content="tkimify — Projects" />
+  <meta property="og:title" content="tkimify" />
   <meta property="og:description" content="A compact project directory for tkimify project sites." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logo-transparent.png" />
@@ -18,13 +18,18 @@
 <body>
   <main class="shell">
     <header class="topbar" id="top">
-      <a class="brand" href="/" aria-label="tkimify project home">
+      <a class="brand" href="/" aria-label="tkimify home">
         <img src="assets/logo-transparent.png" alt="tkimify logo" />
         <span>tkimify</span>
       </a>
+
+      <nav class="section-nav" aria-label="Site sections">
+        <a href="#apps">apps</a>
+        <a href="#tools">tools</a>
+      </nav>
     </header>
 
-    <section id="projects" class="project-grid" aria-label="Project links"></section>
+    <div id="project-sections" class="project-sections"></div>
   </main>
 
   <script src="script.js"></script>
