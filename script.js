@@ -45,10 +45,10 @@ const sections = [
       {
         name: "Basketball Shot Tracker",
         description: "Quick way to keep track of your makes and misses in a shooting session",
-        url: "#",
+        url: "https://shooters.tkimify.com/",
         preview: "assets/preview-shot-tracker.png",
         logo: "assets/shot-tracker-logo.png",
-        isLive: false,
+        isLive: true,
       },
       {
         name: "Sample Tool Two",
