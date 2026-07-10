@@ -33,7 +33,7 @@ const sections = [
         description: "Mental math game with in-depth analysis of your strengths and weaknesses",
         url: "https://synapse.tkimify.com",
         preview: "assets/preview-synapse.png",
-        logo: "assets/synapse-logo.jpg",
+        logo: "assets/synapse-logo.png",
         isLive: true,
       },
       {
