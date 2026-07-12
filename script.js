@@ -44,9 +44,9 @@ const sections = [
     items: [
       {
         name: "Basketball Shot Tracker",
-        description: "Quick way to keep track of your makes and misses in a shooting session",
+        description: "Keep track of your makes and misses and visualize your efficiency",
         url: "https://shooters.tkimify.com/",
-        preview: "assets/preview-shot-tracker.png",
+        preview: "assets/preview-shot-tracker-v2.png",
         logo: "assets/shot-tracker-logo.png",
         isLive: true,
       },
