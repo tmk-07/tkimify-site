@@ -36,6 +36,14 @@ const sections = [
         logo: "assets/synapse-logo.png",
         isLive: true,
       },
+      {
+        name: "NBA Lead Visualization",
+        description: "Visualize the momentum shift across four quarters of any NBA game",
+        url: "https://nbaleads.tkimify.com/",
+        preview: "assets/preview-nbaleads.png",
+        logo: "assets/nba-lead-logo-circle.png",
+        isLive: true,
+      },
     ],
   },
   {
