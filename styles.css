@@ -367,3 +367,60 @@ p {
   change .project-grid back to:
   grid-template-columns: repeat(2, minmax(0, 1fr));
 */
+
+
+.page-footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 44px;
+  text-align: center;
+}
+
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: rgba(154, 156, 168, 0.75);
+  text-decoration: none;
+  transition: color 150ms ease, opacity 150ms ease;
+}
+
+.footer-icon-link:hover {
+  color: #E8B84B;
+}
+
+.gmail-icon {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.gmail-icon path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tkimify-footer-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  opacity: 0;
+}
+
+.tkimify-footer-link {
+  background: currentColor;
+  -webkit-mask: url("assets/tkimifylight.png") center / 14px 14px no-repeat;
+  mask: url("assets/tkimifylight.png") center / 14px 14px no-repeat;
+}
