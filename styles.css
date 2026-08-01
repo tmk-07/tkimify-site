@@ -481,3 +481,37 @@ p {
 .tkimify-footer-link:hover .tkimify-footer-icon {
   opacity: 1;
 }
+
+
+/* Footer final centering: centers the Gmail icon itself, not a multi-icon group. */
+.page-footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.footer-icon-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.gmail-icon {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
