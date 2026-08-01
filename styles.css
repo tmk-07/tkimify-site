@@ -424,3 +424,60 @@ p {
   -webkit-mask: url("assets/tkimifylight.png") center / 14px 14px no-repeat;
   mask: url("assets/tkimifylight.png") center / 14px 14px no-repeat;
 }
+
+
+.page-footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-row {
+  width: fit-content;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.footer-icon-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.gmail-icon {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.tkimify-footer-link {
+  width: 18px;
+  height: 18px;
+}
+
+.tkimify-footer-icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  opacity: 0.82;
+}
+
+.tkimify-footer-link:hover .tkimify-footer-icon {
+  opacity: 1;
+}
