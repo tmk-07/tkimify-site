@@ -1,48 +1,103 @@
-# tkimify Project Directory
+# tkimify — Project Hub
 
-A compact static homepage for linking to project subdomains like `startingfive.tkimify.com`.
+A compact project hub showcasing apps and tools built under the `tkimify.com` domain.
 
-## Edit projects
+**Live site:** [tkimify.com](https://tkimify.com/)
 
-Open `script.js` and edit the `projects` array:
+## Overview
 
-```js
-{
-  name: "Starting Five",
-  description: "Draft the best team in an auction-style basketball draft",
-  url: "https://startingfive.tkimify.com",
-  preview: "assets/preview-starting-five-live.png",
-  logo: "assets/starting-five-logo.png",
-  isLive: true,
-}
+I built this site as a public central directory for my public projects. Instead of listing plain repository links, each project is presented as a visual card with a preview image, short description, live status, and link to the deployed project.
+
+Projects are organized into two sections:
+
+* **Apps** — larger interactive projects and games
+* **Tools** — smaller utilities, visualization tools, and independent research projects
+
+Each project can live on its own subdomain, such as `startingfive.tkimify.com`, `synapse.tkimify.com`, or `shooters.tkimify.com`, while the main `tkimify.com` site acts as the central launch page.
+
+## Features
+
+* Responsive project card layout
+* Apps and tools sections
+* Visual preview images for each project
+* Live/offline status pills
+* Project-specific icons beside card titles
+* Gmail footer link for contact
+* Easy project editing through a simple JavaScript data array
+
+## Technical Architecture
+
+The site is a lightweight static project built with HTML, CSS, and vanilla JavaScript.
+
+Project data is stored in `script.js` as a simple section-based array. Each card can be updated by editing its name, description, URL, preview image, logo, and live status.
+
+Because the site is static, it can be deployed easily through Cloudflare Pages. When changes are pushed to GitHub, Cloudflare Pages automatically redeploys the site.
+
+## Technology
+
+* HTML5
+* CSS3
+* JavaScript
+* GitHub
+* Cloudflare Pages
+* Custom subdomains
+* Static asset hosting
+
+## Project Structure
+
+```text
+.
+├── assets/                 # Logos, preview images, and site icons
+├── index.html              # Main site markup
+├── script.js               # Project section/card data and rendering logic
+├── styles.css              # Dark theme, layout, cards, and footer styling
+└── README.md               # Project documentation
 ```
 
-To add another card, copy that object, paste it below, and change:
+## Editing Project Cards
 
-- `name`
-- `description`
-- `url`
-- `preview`
-- `logo` if the project has its own icon
-- `isLive`
+Project cards are managed in `script.js`.
 
-Put new images in the `assets/` folder and reference them as `assets/your-file-name.png`.
+Each section has an `id`, `title`, and list of `items`:
 
-## Deploy to a real domain
+```js
+const sections = [
+  {
+    id: "apps",
+    title: "apps",
+    items: [
+      {
+        name: "Starting Five",
+        description: "Draft the best team in an auction-style basketball draft",
+        url: "https://startingfive.tkimify.com",
+        preview: "assets/preview-starting-five-live.png",
+        logo: "assets/starting-five-logo.png",
+        isLive: true,
+      },
+    ],
+  },
+];
+```
 
-This is a static site, so it can be hosted on Cloudflare Pages, Vercel, Netlify, GitHub Pages, or any basic web host.
+To add a new project, copy an existing object and update:
 
-For Cloudflare Pages:
+* `name`
+* `description`
+* `url`
+* `preview`
+* `logo`
+* `isLive`
 
-1. Upload these files to a GitHub repo.
-2. In Cloudflare Pages, create a new project from that repo.
-3. Use no build command.
-4. Set the output directory to `/` or leave it blank, depending on the Cloudflare UI.
-5. Add your custom domain, such as `tkimify.com`, in Cloudflare Pages.
-6. Keep project apps on subdomains like `startingfive.tkimify.com`.
+## Deployment
 
-## Preview screenshots
+The site is deployed with Cloudflare Pages.
 
-The current Starting Five card uses a saved screenshot image. Browsers cannot reliably take live screenshots of another site from static frontend code.
+Typical update workflow:
 
-Best setup later: use a GitHub Action with Playwright to screenshot each live subdomain and save the image into `assets/` during deploy.
+```bash
+git add .
+git commit -m "Update tkimify site"
+git push
+```
+
+Cloudflare Pages automatically rebuilds and deploys the latest version after each push.
